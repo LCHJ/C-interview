@@ -1352,6 +1352,8 @@ int main(){
 [find](http://www.cplusplus.com/reference/algorithm/find/)|顺序查找|O(n)|可重复
 [sort](https://github.com/gcc-mirror/gcc/blob/master/libstdc++-v3/include/bits/stl_algo.h#L4808)|[内省排序](https://en.wikipedia.org/wiki/Introsort)|O(n*log<sub>2</sub>n)|可重复
 
+#### 内省排序
+首先从快速排序开始，当递归深度超过一定深度（深度为排序元素数量的对数值）后转为堆排序。采用这个方法，内省排序既能在常规数据集上实现快速排序的高性能，又能在最坏情况下仍保持{\displaystyle O(n\log n)}O(n\log n)的时间复杂度。由于这两种算法都属于比较排序算法，所以内省排序也是一个比较排序算法。
 
 <a id="data-structure"></a>
 
